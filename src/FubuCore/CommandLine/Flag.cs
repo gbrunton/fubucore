@@ -45,5 +45,12 @@ namespace FubuCore.CommandLine
             
             return "[{0} <{1}>]".ToFormat(flagName, _property.Name.ToLower().TrimEnd('f', 'l','a','g'));
         }
+
+		public override string PromptForArg()
+		{
+			var propertyName = PropertyName;
+			var description = Description;
+			return string.Format("Optional {0}{1}: ", propertyName, propertyName == description ? string.Empty : " - " + description);
+		}
     }
 }

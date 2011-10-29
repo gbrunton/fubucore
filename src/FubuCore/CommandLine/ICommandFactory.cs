@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace FubuCore.CommandLine
 {
@@ -6,5 +7,7 @@ namespace FubuCore.CommandLine
     {
         CommandRun BuildRun(string commandLine);
         CommandRun BuildRun(IEnumerable<string> args);
+    	IEnumerable<Type> AllCommandTypes();
+    	string GetAppName();
     }
 }

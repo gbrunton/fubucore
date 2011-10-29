@@ -100,6 +100,7 @@
     <Compile Include="CommandLine\EnumerableArgument.cs" />
     <Compile Include="CommandLine\HelpCommand.cs" />
     <Compile Include="CommandLine\HelpInput.cs" />
+    <Compile Include="CommandLine\InputArgumentBuilder.cs" />
     <Compile Include="Configuration\AppSettingsSettingSource.cs" />
     <Compile Include="Configuration\SettingAttribute.cs" />
     <Compile Include="Configuration\SettingDataSource.cs" />

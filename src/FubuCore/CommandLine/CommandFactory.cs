@@ -177,5 +177,10 @@ namespace FubuCore.CommandLine
         {
             _appName = appName;
         }
+
+		public string GetAppName()
+		{
+			return _appName;
+		}
     }
 }

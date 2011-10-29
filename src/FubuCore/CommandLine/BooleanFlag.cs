@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
 
 namespace FubuCore.CommandLine
@@ -30,5 +29,17 @@ namespace FubuCore.CommandLine
         {
             return "[{0}]".ToFormat(InputParser.ToFlagName(_property));
         }
+
+		public override string PromptForArg()
+		{
+			var propertyName = PropertyName;
+			var description = Description;
+			return string.Format("Optional {0}{1} (y for true / empty for false): ", propertyName, propertyName == description ? string.Empty : " - " + description);
+		}
+
+		public string ConvertPromptArg(string argFromPrompt)
+		{
+			return string.IsNullOrEmpty(argFromPrompt) ? string.Empty : ConvertPromptArg();
+		}
     }
 }
